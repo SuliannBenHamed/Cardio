@@ -10,6 +10,12 @@ This work uses the Eulerian Video Magnification (EVM) processing pipeline create
 
 Wu, H.-Y., Rubinstein, M., Shih, E., Guttag, J., Durand, F., Freeman, W., 2012. Eulerian video magnification for revealing subtle changes in the world. ACM Trans. Graph. 31, 65:1-65:8. https://doi.org/10.1145/2185520.2185561
 
+It also uses the Cross wavelet and wavelet coherence toolbox for MATLAB: https://github.com/grinsted/wavelet-coherence
+
+Grinsted, A., J. C. Moore, S. Jevrejeva (2004), Application of the cross wavelet transform and wavelet coherence to geophysical time series, Nonlin. Process. Geophys., 11, 561566 link
+
+The corresponding directories (EVM_Matlab and the wavelet-coherence-master) should be added to the path as well as their subdirectories. 
+
 ### CreateROI: Define ROI in Video 
 
 This version of this script assumes location of region of interest is fixed throughout video.
