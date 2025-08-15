@@ -10,10 +10,10 @@ This work uses the Eulerian Video Magnification (EVM) processing pipeline create
 
 Wu, H.-Y., Rubinstein, M., Shih, E., Guttag, J., Durand, F., Freeman, W., 2012. Eulerian video magnification for revealing subtle changes in the world. ACM Trans. Graph. 31, 65:1-65:8. https://doi.org/10.1145/2185520.2185561
 
-### Define ROI in Video 
+### CreateROI: Define ROI in Video 
 
 This version of this script assumes location of region of interest is fixed throughout video.
 Place Video you want to process in EVM_Matlab/data.
-Run CreateRoiFile.m, select Video, draw ROI, on enter, choose ROI name. It saved in EVM_Matlab/data.
+Run CreateROI\CreateRoiFile.m, select Video, choose ROI name, draw ROI, press enter. ROI is saved in EVM_Matlab/data.
 
 
