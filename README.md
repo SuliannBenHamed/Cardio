@@ -27,7 +27,7 @@ To run these scripts, you need the following:
 
 #### Usage Workflow
 
-The pipeline is divided into 4 sequential steps (Scripts A to D).
+The pipeline is divided into 4 sequential steps (Scripts A to D). Place your video in the MyVideo folder; the subfolders will be created automatically.
 
 **Step A: Spatial Cropping (Optional if your video is focused on the subject face)**
  - Script: A_Batch_Spatial_Crop.m
