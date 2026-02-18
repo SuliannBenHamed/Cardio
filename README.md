@@ -30,11 +30,11 @@ To run these scripts, you need the following:
 The pipeline is divided into 4 sequential steps (Scripts A to D).
 
 * Step A: Spatial Cropping (Optional if your video is focused on the subject face)
-** Script: A_Batch_Spatial_Crop.m
-                * Pre-processes raw video files to stabilize the region of interest.
-                          * Input: Folder containing raw .avi or .mp4 files.
-                          * Action: Allows the user to manually draw a bounding box around the subject's face/skin area on the first frame.
-                          * Output: Saves cropped, stabilized videos in a processed_videos subfolder.
+ - Script: A_Batch_Spatial_Crop.m
+   + Pre-processes raw video files to stabilize the region of interest.
+     * Input: Folder containing raw .avi or .mp4 files.
+     * Action: Allows the user to manually draw a bounding box around the subject's face/skin area on the first frame.
+     * Output: Saves cropped, stabilized videos in a processed_videos subfolder.
 
 Step B: EVM Magnification
 
