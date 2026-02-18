@@ -29,57 +29,34 @@ To run these scripts, you need the following:
 
 The pipeline is divided into 4 sequential steps (Scripts A to D).
 
-* Step A: Spatial Cropping (Optional if your video is focused on the subject face)
+**Step A: Spatial Cropping (Optional if your video is focused on the subject face)**
  - Script: A_Batch_Spatial_Crop.m
    + Pre-processes raw video files to stabilize the region of interest.
      * Input: Folder containing raw .avi or .mp4 files.
      * Action: Allows the user to manually draw a bounding box around the subject's face/skin area on the first frame.
      * Output: Saves cropped, stabilized videos in a processed_videos subfolder.
 
-Step B: EVM Magnification
+**Step B: EVM Magnification**
+- Script: B_EVM_Magnification.m
+  + Applies the Eulerian Video Magnification algorithm to amplify color changes related to blood flow. Parameters:
+    * alpha: Amplification factor (Default: 10–20 but can be at 100 if no results)
+    * fl / fh: Frequency limits (Hz).
+    * Output: Generates magnified videos in an EVM_Results folder.
 
-Script: B_EVM_Magnification.m
+**Step C: ROI Definition**
+- Script: C_Create_ROI.m
+  + A helper utility to define the specific skin patch (Region of Interest) for signal extraction.
+    * Action: Select a representative video and draw the ROI (e.g., cheek, forehead).
+    * Output: Saves a .mat file containing the ROI coordinates.
+    * Note: For legacy MATLAB versions (<2018b), use B_CreateRoiFile_2018a.m.
 
-Applies the Eulerian Video Magnification algorithm to amplify color changes related to blood flow.
-
-    Parameters:
-
-        alpha: Amplification factor (Default: 10–20 but can be at 100 if no results)
-
-        fl / fh: Frequency limits (Hz).
-
-    Output: Generates magnified videos in an EVM_Results folder.
-
-Step C: ROI Definition
-
-Script: C_Create_ROI.m
-
-A helper utility to define the specific skin patch (Region of Interest) for signal extraction.
-
-    Action: Select a representative video and draw the ROI (e.g., cheek, forehead).
-
-    Output: Saves a .mat file containing the ROI coordinates.
-
-    Note: For legacy MATLAB versions (<2018b), use B_CreateRoiFile_2018a.m.
-
-Step D: Signal Extraction & Analysis
-
-Script: D_HeartRate_Extraction.m
-
-Extracts the heart rate signal using the method described in Froesel et al. (2020).
-
-    Methodology:
-
-        Spatial averaging of pixels within the ROI.
-
-        Temporal bandpass filtering (Butterworth).
-
-        Continuous Wavelet Transform (CWT).
-
-        Max-power frequency extraction.
-
-        Cubic Spline smoothing.
-
-    Input: The .mat ROI file and the folder containing EVM videos.
-
-    Output: Saves raw data (.mat), heatmaps, and heart rate plots (.png).
+**Step D: Signal Extraction & Analysis**
+- Script: D_HeartRate_Extraction.m
+  + Extracts the heart rate signal using the method described in Froesel et al. (2020). Methodology:
+    * Spatial averaging of pixels within the ROI.
+    * Temporal bandpass filtering (Butterworth).
+    * Continuous Wavelet Transform (CWT).
+    * Max-power frequency extraction.
+    * Cubic Spline smoothing.
+    * Input: The .mat ROI file and the folder containing EVM videos.
+    * Output: Saves raw data (.mat), heatmaps, and heart rate plots (.png).
