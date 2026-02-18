@@ -9,7 +9,7 @@ Heart rate (HR) is extremely valuable in the study of complex behaviours and the
 If you use this code or method in your research, please cite the following methodological paper:
 * The Eulerian Video Magnification (EVM) processing pipeline created by the MIT : http://people.csail.mit.edu/mrub/evm/, [Wu, H.-Y., Rubinstein, M., Shih, E., Guttag, J., Durand, F., Freeman, W., 2012. Eulerian video magnification for revealing subtle changes in the world. ACM Trans. Graph. 31, 65:1-65:8.] (https://doi.org/10.1145/2185520.2185561)
 * It also uses the Cross wavelet and wavelet coherence toolbox for MATLAB: https://github.com/grinsted/wavelet-coherence, [Grinsted, A., J. C. Moore, S. Jevrejeva (2004), Application of the cross wavelet transform and wavelet coherence to geophysical time series, Nonlin. Process. Geophys., 11, 561566] (https://doi.org/10.5194/npg-11-561-2004)
-* Automated video-based heart rate tracking for the anesthetized and behaving monkey M. Froesel, Q. Goudard, M. Hauser, M. Gacoin, S. Ben Hamed Scientific Reports 10, 17940 (2020). DOI: 10.1038/s41598-020-74954-5
+* [Automated video-based heart rate tracking for the anesthetized and behaving monkey M. Froesel, Q. Goudard, M. Hauser, M. Gacoin, S. Ben Hamed Scientific Reports 10, 17940 (2020)] (https://doi.org/10.1038/s41598-020-74954-5)
 * For details regarding response timings to stimuli or specific experimental contexts referenced in the development of this tool, please refer to: [Socially meaningful visual context either enhances or inhibits vocalisation processing in the macaque brain M. Froesel, M. Gacoin, S. Clavagnier, M. Hauser, Q. Goudard, S. Ben Hamed, Nature Communications 13, 4886 (2022)] (http://doi.org/10.1038/s41467-022-32512-9)
 
 ### How to?
